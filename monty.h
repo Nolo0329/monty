@@ -1,9 +1,6 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-//#ifndef __MONTY_H__
-//#define __MONTY_H__
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -77,9 +74,5 @@ int no_int_error(unsigned int line_number);
 int pop_error(unsigned int line_number);
 int pint_error(unsigned int line_number);
 int short_stack_error(unsigned int line_number, char *op);
-int div_error(unsigned int line_number);
-int pchar_error(unsigned int line_number, char *message);
-
-//#endif /* __MONTY_H__ */
 
 #endif // MONTY_H
