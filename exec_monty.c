@@ -109,7 +109,7 @@ int run_monty(FILE *script_fd)
 	if (init_stack(&stack) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
 
-	while (get_int(&line, &len, script_fd) != -1)
+	while (!feof(script_fd))
 	{
 		line_number++;
 		op_toks = strtow(line, DELIMS);
@@ -120,7 +120,7 @@ int run_monty(FILE *script_fd)
 			free_stack(&stack);
 			return (malloc_error());
 		}
-		else if (op_toks[0][0] == '#') //comment line
+		else if (op_toks[0][0] == '#')
 		{
 			free_tokens();
 			continue;
