@@ -75,4 +75,4 @@ int pop_error(unsigned int line_number);
 int pint_error(unsigned int line_number);
 int short_stack_error(unsigned int line_number, char *op);
 
-#endif // MONTY_H
+#endif
